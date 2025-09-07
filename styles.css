@@ -15,11 +15,7 @@ body {
   font-style: normal;
 }
 
-.gradient-text {
-   background: linear-gradient(to right, #4c4b4d, #45209c);
-    background-clip: text;
-    color: transparent;
-}
+
 
 h1 { 
     font-family: "Miss Fajardose";
@@ -27,6 +23,10 @@ h1 {
     animation: 3s linear 1s infinite running slide-in;
     text-align: center;
     margin-top: 1vw;
+    background: linear-gradient(to right, #4c4b4d, #45209c);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 4px #1d013096, 0 0 12px #2e20f3;
 }
 h2 {
     font-family: "New Rocker";
@@ -39,6 +39,16 @@ h2 {
     margin: 0;
     padding-bottom: 5px;
     z-index: 10;
+    background: linear-gradient(90deg, #dc2aff, #085fff, #13e459, #6b38f9);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 4px #ffffff96, 0 0 16px #ff6e61b9;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: gradient-move 4s linear infinite;
 }
 
 /*div formatting*/
@@ -169,4 +179,9 @@ h2 {
 0%, 100% { opacity: 0; }
 50% { opacity: 1; } 
 
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
